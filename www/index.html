@@ -22,10 +22,66 @@
       document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
       document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
     }
+    
   </script>
 </head>
 <body>
-  <br />
-  This is a template for Onsen UI app.
+    <h1>Calculadora</h1>
+    <h2>Somar</h2>
+    <input type="text" placeholder="Incira o primeiro valor" id="valor01"></input>
+    <input type="text" placeholder="Incira o segundo valor" id="valor02"></input>
+    <input type="button" placeholder="SOMAR" id="btnSomar" onclick="soma()"></input>
+    <h3 id="resultado"></h3>
+    <hr>
+    <h2>Subtrair</h2>
+    <input type="text" placeholder="Incira o primeiro valor" id="valor03"></input>
+    <input type="text" placeholder="Incira o segundo valor" id="valor04"></input>
+    <input type="button" placeholder="SOMAR" id="btnSomar" onclick="subtrair()"></input>
+    <h3 id="resultado"></h3>
+    <hr>
+    <h2>Mulltiplicar</h2>
+    <input type="text" placeholder="Incira o primeiro valor" id="valor05"></input>
+    <input type="text" placeholder="Incira o segundo valor" id="valor06"></input>
+    <input type="button" placeholder="SOMAR" id="btnSomar" onclick="multiplicar()"></input>
+    <h3 id="resultado"></h3>
+    <hr>
+    <h2>Divisão</h2>
+    <input type="text" placeholder="Incira o primeiro valor" id="valor07"></input>
+    <input type="text" placeholder="Incira o segundo valor" id="valor08"></input>
+    <input type="button" placeholder="SOMAR" id="btnSomar" onclick="dividir()"></input>
+    <h3 id="resultado"></h3>
+    <hr>
+
+    <script>
+      function soma(){
+        let val1 = Number(document.getElementById("valor01").value);
+        let val2 = Number(document.getElementById("valor02").value);
+        let result = val1 + val2;
+        document.getElementById("resultado").innerText = result
+      }
+
+      function subtrair(){
+        let val1 = Number(document.getElementById("valor03").value);
+        let val2 = Number(document.getElementById("valor04").value);
+        let result = val1 - val2;
+        document.getElementById("resultado").innerText = result
+      }
+      
+      function multiplicar(){
+        let val1 = Number(document.getElementById("valor05").value);
+        let val2 = Number(document.getElementById("valor06").value);
+        let result = val1 + val2;
+        document.getElementById("resultado").innerText = result
+      }
+
+      function dividir(){
+        let val1 = Number(document.getElementById("valor07").value);
+        let val2 = Number(document.getElementById("valor08").value);
+        let result = val1 + val2;
+        document.getElementById("resultado").innerText = result
+      }
+        
+    </script>
 </body>
+
 </html>
