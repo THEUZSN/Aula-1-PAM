@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="cordova.js"></script>
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    ons.ready(function() {
+      console.log("Onsen UI is ready!");
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+    
+  </script>
+</head>
+<header>
+    <h1>Calculadora</h1>
+</header>
+<body>
+    <h2>Somar</h2>
+    <input type="text" placeholder="Incira o primeiro valor" id="valor01"></input>
+    <input type="text" placeholder="Incira o segundo valor" id="valor02"></input>
+    <input type="button" placeholder="SOMAR" id="btn" value="Calcular" onclick="soma()"></input>
+    <h3 id="res0"></h3>
+    <hr>
+    <h2>Subtrair</h2>
+    <input type="text" placeholder="Incira o primeiro valor" id="valor03"></input>
+    <input type="text" placeholder="Incira o segundo valor" id="valor04"></input>
+    <input type="button" placeholder="SUBTRAIR" id="btn" value="Calcular" onclick="subtrair()"></input>
+    <h3 id="res1"></h3>
+    <hr>
+
+    <h2>Mulltiplicar</h2>
+    <input type="text" placeholder="Incira o primeiro valor" id="valor05"></input>
+    <input type="text" placeholder="Incira o segundo valor" id="valor06"></input>
+    <input type="button" placeholder="MULTIPLICAR" id="btn" value="Calcular" onclick="multiplicar()"></input>
+    <h3 id="res2"></h3>
+    <hr>
+
+    <h2>Divisão</h2>
+    <input type="text" placeholder="Incira o primeiro valor" id="valor07"></input>
+    <input type="text" placeholder="Incira o segundo valor" id="valor08"></input>
+    <input type="button" placeholder="DIVIDIR" id="btn" value="Calcular" onclick="dividir()"></input>
+    <h3 id="res3"></h3>
+    <hr>
+
+    <script>
+      function soma(){
+        let val1 = Number(document.getElementById("valor01").value);
+        let val2 = Number(document.getElementById("valor02").value);
+        let result = val1 + val2;
+        document.getElementById("res0").innerText = result
+      }
+
+      function subtrair(){
+        let val1 = Number(document.getElementById("valor03").value);
+        let val2 = Number(document.getElementById("valor04").value);
+        let result = val1 - val2;
+        document.getElementById("res1").innerText = result
+      }
+      
+      function multiplicar(){
+        let val1 = Number(document.getElementById("valor05").value);
+        let val2 = Number(document.getElementById("valor06").value);
+        let result = val1 * val2;
+        document.getElementById("res2").innerText = result
+      }
+
+      function dividir(){
+        let val1 = Number(document.getElementById("valor07").value);
+        let val2 = Number(document.getElementById("valor08").value);
+        let result = val1 / val2;
+        document.getElementById("res3").innerText = result
+      }
+        
+    </script>
+</body>
+
+</html>
