@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="cordova.js"></script>
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    ons.ready(function() {
+      console.log("Onsen UI is ready!");
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+    
+  </script>
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <div class="conta"></div>
+    <section class="keyboard">
+        <button class="key" value="1" >1</button>
+        <button class="key" value="2" >2</button>
+        <button class="key" value="3" >3</button>
+        <button class="key" value="+" >+</button>
+        <button class="key" value="4" >4</button>
+        <button class="key" value="5" >5</button>
+        <button class="key" value="6" >6</button>
+        <button class="key" value="-" >-</button>
+        <button class="key" value="7" >7</button>
+        <button class="key" value="8" >8</button>
+        <button class="key" value="9" >9</button>
+        <button class="key" value="*" >*</button>
+        <button class="key" value="/" >/</button>
+        <button class="key" value="0" >0</button>
+        <button class="key" value="(" >(</button>
+        <button class="key" value=")" >)</button>
+        <button class="dif-key" onclick="clear_c()">C</button>
+        <button class="dif-key" onclick="erase()">←</button>
+        <button class="key-res" onclick="res()">=</button>
+    </section>
+
+    <a class="change-type" href="index.html">Mudar</a>
+
+    <script>
+        let conta = ""
+        function clicou(event){
+            conta += event.target.value
+            document.querySelector(".conta").innerText = conta;
+        }
+        document.querySelectorAll(".key").forEach(el=>{
+            el.addEventListener("click",clicou)
+        })
+        function res(){
+            conta = String(eval(conta));
+            document.querySelector(".conta").innerText = conta
+        }
+        function clear_c(){
+            conta = "";
+            document.querySelector(".conta").innerText = conta
+        }
+        function erase(){
+            conta = conta.substr(0,conta.length -1);
+            document.querySelector(".conta").innerText = conta
+        }
+    </script>
+</body>
+
+</html>

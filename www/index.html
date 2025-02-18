@@ -25,37 +25,38 @@
     
   </script>
 </head>
-<header>
-    <h1>Calculadora</h1>
-</header>
 <body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <br><br>
     <h2>Somar</h2>
     <input type="text" placeholder="Incira o primeiro valor" id="valor01"></input>
     <input type="text" placeholder="Incira o segundo valor" id="valor02"></input>
-    <input type="button" placeholder="SOMAR" id="btn" value="Calcular" onclick="soma()"></input>
-    <h3 id="res0"></h3>
+    <input type="button" class="btn" value="Calcular" onclick="soma()"></input>
+    <h3 class="res" id="res0"></h3>
     <hr>
     <h2>Subtrair</h2>
     <input type="text" placeholder="Incira o primeiro valor" id="valor03"></input>
     <input type="text" placeholder="Incira o segundo valor" id="valor04"></input>
-    <input type="button" placeholder="SUBTRAIR" id="btn" value="Calcular" onclick="subtrair()"></input>
-    <h3 id="res1"></h3>
+    <input type="button" class="btn" value="Calcular" onclick="subtrair()"></input>
+    <h3 class="res" id="res1"></h3>
     <hr>
 
     <h2>Mulltiplicar</h2>
     <input type="text" placeholder="Incira o primeiro valor" id="valor05"></input>
     <input type="text" placeholder="Incira o segundo valor" id="valor06"></input>
-    <input type="button" placeholder="MULTIPLICAR" id="btn" value="Calcular" onclick="multiplicar()"></input>
-    <h3 id="res2"></h3>
+    <input type="button" class="btn" value="Calcular" onclick="multiplicar()"></input>
+    <h3 class="res" id="res2"></h3>
     <hr>
 
     <h2>Divisão</h2>
     <input type="text" placeholder="Incira o primeiro valor" id="valor07"></input>
     <input type="text" placeholder="Incira o segundo valor" id="valor08"></input>
-    <input type="button" placeholder="DIVIDIR" id="btn" value="Calcular" onclick="dividir()"></input>
-    <h3 id="res3"></h3>
+    <input type="button"  class="btn" value="Calcular" onclick="dividir()"></input>
+    <h3 class="res" id="res3"></h3>
     <hr>
-
+    <a class="change-type" href="button_calc.html">Mudar</a>
     <script>
       function soma(){
         let val1 = Number(document.getElementById("valor01").value);
