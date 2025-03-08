@@ -1,8 +1,78 @@
 /**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
 body{
     text-align: center;
 }
+h1{
+    /* margin-bottom: 40px; */
+    background-color: cornflowerblue;
+}
 p{
     font-size: 20px;
-    padding: ;
+}
+.btn{
+    width: 20%px;
+    color:black;
+    font-size: medium;
+    height: 60px;
+ 
+}
+hr{
+    color: cornflowerblue;
+    background-color: cornflowerblue;
+}
+input[type = "text"]{
+    width: 40%;
+    height: 60px;
+}
+.res{
+    padding: 20px;
+}
+.change-type{
+    position: absolute;
+    bottom:4px;
+    right: 4px;
+    background-color: cornflowerblue;
+    border-radius: 99px;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.conta{
+    height: 80px;
+    background-color: darkslategray;
+    color: white;
+    font-size: 1.6em;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.keyboard{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px 0;
+    background-color: gray;
+}
+.key, .key-res, .dif-key{
+    width: 25vw;
+    border-radius: 99px;
+    height: 25vw;
+    font-size: 1.5em;
+    border: 2px solid black;
+    transition: 130ms;
+}
+.key:hover, .key-res:hover, .dif-key:hover{
+    transform: scale(1.2);
+}
+.key-res{
+    background-color: green;
+    color: white;
 }
